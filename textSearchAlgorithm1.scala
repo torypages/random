@@ -3,8 +3,6 @@
 
 // Can I make this functional?
 
-import scala.collection.immutable.HashSet
-
 object MyObject{
   def main(args: Array[String]): Unit = {
     val haystack: Array[Char] = "jim_saw_me_in_a_barbrr_parlour".toCharArray
