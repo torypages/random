@@ -8,7 +8,7 @@ object MyObject{
          case midVal if (midVal <= needle) => _binarySearch(midIndex + 1, high)
          case midVal if (midVal >= needle) => _binarySearch(low, midIndex - 1)
        }
-     } 
+     }
      _binarySearch(0, haystack.size - 1)
   }
 
