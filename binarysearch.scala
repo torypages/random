@@ -11,7 +11,7 @@ object MyObject{
      } 
      _binarySearch(0, haystack.size - 1)
   }
-  
+
   def main(args: Array[String]): Unit = {
     val data = List(1,88,999,333,222,4432,24,657,234,121,45,435,234).sorted
     println(binarySearch(data, 333))
