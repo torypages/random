@@ -12,6 +12,11 @@ This will start the latest mongo with the following features:
 docker run --net=host --name bench-mongo -v /home/tory/mongo_data/:/data/db -d mongo:latest
 ```
 
+## Attach running container
+```
+docker exec -it  8ce9e22a3ed7  /bin/bash
+```
+
 # Git
 ## Set editor
 ```
