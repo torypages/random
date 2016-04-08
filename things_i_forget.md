@@ -41,4 +41,4 @@ docker run -d -p 8888:8888 --user root --net=host -e NB_UID=1001 -v /home/freyja
 git config --global core.editor "vim"
 ```
 # Eclipse
-`ctrl + F9` to run individual unit tests
+`ctrl + F9` to run individual unit tests, when selecting hold shift for debug mode.
