@@ -42,3 +42,11 @@ git config --global core.editor "vim"
 ```
 # Eclipse
 `ctrl + F9` to run individual unit tests, when selecting hold shift for debug mode.
+
+# Mongo
+
+##Find null values
+
+```
+db.somecollection.find({'some_field': {$type: 10}})
+```
