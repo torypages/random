@@ -1,3 +1,11 @@
+# AWS
+
+## remove prefix / path
+```
+aws s3 rm s3://something/more/ --recursive
+```
+
+
 # Docker
 https://hub.docker.com/_/mongo/
 
