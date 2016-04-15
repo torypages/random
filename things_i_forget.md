@@ -13,6 +13,7 @@ https://github.com/jupyter/docker-stacks/tree/master/all-spark-notebook
 
 ## Start Mongo
 
+### latest
 This will start the latest mongo with the following features:
 
 * network in host mode allowing me to easily connect to it
@@ -21,6 +22,12 @@ This will start the latest mongo with the following features:
 ```
 docker run --net=host --name bench-mongo -v /home/tory/mongo_data/:/data/db -d mongo:latest
 ```
+
+### older
+
+```
+ docker run --net=host --name testmongo -v /home/tory/Code/mongo_mmapv1/mongo/:/data/db -d mongo:2.2.7 --storageEngine mmapv1
+ ```
 
 ## Attach running container
 ```
