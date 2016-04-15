@@ -26,8 +26,8 @@ docker run --net=host --name bench-mongo -v /home/tory/mongo_data/:/data/db -d m
 ### older
 
 ```
- docker run --net=host --name testmongo -v /home/tory/Code/mongo_mmapv1/mongo/:/data/db -d mongo:2.2.7 --storageEngine mmapv1
- ```
+docker run --net=host --name testmongo -v /home/tory/Code/mongo_mmapv1/mongo/:/data/db -d mongo:2.2.7
+```
 
 ## Attach running container
 ```
