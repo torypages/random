@@ -71,3 +71,12 @@ db.somecollection.find({'some_field': {$type: 10}})
 ```
 mongodump --db somedb -c actions  --query "{\"timestamp\":{\"\$gt\":{\"\$date\":`date -d 2016-02-01 +%s`000}}, someField: \"someValue\"}"
 ```
+
+
+# Java
+
+## Maven skip tests
+
+```
+mvn install -DskipTests
+```
