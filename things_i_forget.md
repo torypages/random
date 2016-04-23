@@ -80,3 +80,17 @@ mongodump --db somedb -c actions  --query "{\"timestamp\":{\"\$gt\":{\"\$date\":
 ```
 mvn install -DskipTests
 ```
+
+# SBT Scala Build Tool
+
+## Generate project files for Eclipse
+
+```
+sbt eclipse
+```
+
+I required a `~/.sbt/0.13/plugins/plugins.sbt` containing the following for this to work
+
+```
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")
+```
