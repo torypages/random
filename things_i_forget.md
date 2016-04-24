@@ -94,3 +94,14 @@ I required a `~/.sbt/0.13/plugins/plugins.sbt` containing the following for this
 ```
 addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "4.0.0")
 ```
+
+
+# Mesos
+## Minimesos
+
+For some reason the front page instructions don't tell you to use `--exposedHostPorts` but this part was super important for me.
+```
+# curl -sSL https://minimesos.org/install | sh
+export PATH=$PATH:/root/.minimesos/bin
+minimesos up --exposedHostPorts
+```
