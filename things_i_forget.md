@@ -105,3 +105,10 @@ For some reason the front page instructions don't tell you to use `--exposedHost
 export PATH=$PATH:/root/.minimesos/bin
 minimesos up --exposedHostPorts
 ```
+
+Also, though blunt, restarting docker service `service docker restart` will fix
+```
+Unable to find image 'inet6:latest' locally
+Pulling repository inet6
+FATA[0001] Error: image library/inet6:latest not found
+```
