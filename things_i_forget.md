@@ -11,6 +11,12 @@ https://hub.docker.com/_/mongo/
 
 https://github.com/jupyter/docker-stacks/tree/master/all-spark-notebook
 
+## Change data directory
+
+Edit /etc/default/docker to add
+```DOCKER_OPTS="-dns 8.8.8.8 -dns 8.8.4.4 -g /datadiryouwant"```
+
+
 ## Start Mongo
 
 ### latest
