@@ -16,6 +16,14 @@ https://github.com/jupyter/docker-stacks/tree/master/all-spark-notebook
 Edit /etc/default/docker to add
 ```DOCKER_OPTS="-dns 8.8.8.8 -dns 8.8.4.4 -g /datadiryouwant"```
 
+## Start MySQL
+```docker run --name mysql -v /home/t/Tmp/dockermysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=password -p 3306:3306  -d mysql:latest```
+
+when connecting be sure to specify tcp
+
+```mysql -u root --protocol tcp  -p```
+
+
 
 ## Start Mongo
 
