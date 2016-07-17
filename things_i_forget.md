@@ -34,7 +34,7 @@ This will start the latest mongo with the following features:
 * storing the data in a place of my choosing on the host
 
 ```
-docker run --net=host --name bench-mongo -v /home/tory/mongo_data/:/data/db -d mongo:latest
+docker run -p 27017:27017 --name mongo -v /home/t/Tmp/dockermongo/:/data/db -d mongo:latest
 ```
 
 ### older
