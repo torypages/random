@@ -14,7 +14,7 @@ ExecStart=/bin/bash -c "while true; do date >> /tmp/fail_test.log; sleep 1; done
 WantedBy=multi-user.target
 ```
 
-cat fail_action.service
+fail_action.service
 ```
 [Unit]
 Description=Action to do on fail
