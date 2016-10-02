@@ -10,7 +10,6 @@ OnFailure=fail_action.service
 Type=simple
 ExecStart=/bin/bash -c "while true; do date >> /tmp/fail_test.log; sleep 1; done;"
 
-
 [Install]
 WantedBy=multi-user.target
 ```
