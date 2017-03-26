@@ -22,7 +22,7 @@ By default the script will actually relaunch itself inside a virtualenv.
 This is done to facilitate the installing of pip packages.
 '''
 
-def main(args):
+def deploy(args):
     # Make sure paths are full paths.
     args.src = os.path.abspath(os.path.expanduser(args.src))
     if args.artifact_out:
@@ -89,6 +89,13 @@ def relaunch_in_virtualenv():
     subprocess.call(cmd_str.split())
 
 
+def main(args):
+    # See argparse def'n for details on args
+    if not args.skip_virtualenv:
+        relaunch_in_virtualenv()
+    else:
+        main(args)
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument('--src', required=True, type=str,
@@ -107,8 +114,4 @@ if __name__ == '__main__':
                         help='This path will be deleted/cleaned.')
 
     args = parser.parse_args()
-
-    if not args.skip_virtualenv:
-        relaunch_in_virtualenv()
-    else:
-        main(args)
+    main(args)
