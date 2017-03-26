@@ -120,7 +120,7 @@ if __name__ == '__main__':
                         help='This path will be deleted/cleaned.')
     parser.add_argument('--include-hidden', action='store_true',
                         help='By default, hidden files like ".idea" '
-                             'will no be zipped up.')
+                             'will not be zipped up.')
 
     args = parser.parse_args()
     main(args)
