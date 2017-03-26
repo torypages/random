@@ -45,11 +45,13 @@ def deploy(args):
     module_name = args.src[len(src_dir) + 1:].split('.')[0]
     artifact_out = os.path.join(os.getcwd(), module_name)
     if args.artifact_out:
-        out_artifact = args.artifact_out
+        artifact_out = args.artifact_out
 
     # Copy over script(s) to staging area.
     os.chdir(src_dir)
     for f in os.listdir(src_dir):
+        if not args.include_hidden and f.startswith('.'):
+            continue
         if os.path.isfile(f):
             shutil.copy(f, tmpdir)
         else:
@@ -116,6 +118,9 @@ if __name__ == '__main__':
     parser.add_argument('--virtualenv-clean', required=False, type=str,
                         default=True,
                         help='This path will be deleted/cleaned.')
+    parser.add_argument('--include-hidden', action='store_true',
+                        help='By default, hidden files like ".idea" '
+                             'will no be zipped up.')
 
     args = parser.parse_args()
     main(args)
