@@ -49,8 +49,12 @@ def deploy(args):
 
     # Copy over script(s) to staging area.
     os.chdir(src_dir)
-    for f in filter(lambda x: os.path.isfile(x), os.listdir(src_dir)):
-        shutil.copy(f, tmpdir)
+    for f in os.listdir(src_dir):
+        if os.path.isfile(f):
+            shutil.copy(f, tmpdir)
+        else:
+            shutil.copytree(f, os.path.join(tmpdir, f))
+
 
     # Install requirements into virtualenv / staging area.
     requirements = open(requirements_file, 'r')
@@ -94,7 +98,7 @@ def main(args):
     if not args.skip_virtualenv:
         relaunch_in_virtualenv()
     else:
-        main(args)
+        deploy(args)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
