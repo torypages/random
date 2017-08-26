@@ -1,3 +1,12 @@
+# Macbook + Ubuntu
+## Install wifi drivers without wifi
+```
+sudo dpkg -i /media/username/volname/pool/main/d/dkms/dkms_*.deb
+sudo dpkg -i /media/username/volname/pool/restricted/b/bcmwl/bcmwl-kernel-source_*.deb
+```
+https://askubuntu.com/questions/146425/how-can-i-install-and-download-drivers-without-internet
+
+
 # AWS
 
 ## remove prefix / path
